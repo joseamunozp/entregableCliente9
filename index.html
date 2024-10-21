@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!--esto es el enlace de la FUENTE que vamos a usar https://pokeapi.co/ de la cual sacaremos informacion  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="script.js" type="text/javascript" defer></script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!--PRIMERO. TENEMOS UNA CARPETA CON 3 ARCHIVOS, INDEX, CSS Y JS Y UNA IMAGEN POKE-SHADOW.PNG, QUE ES LA QUE VAMOS A USAR
+     CUANDO NO SE ENCUENTRE UN POKEMON O AL INICIO DE LA APP-->
+    <form action="" onsubmit="searchPokemon(event)">
+        <!-- SEGUNDO DENTRO DEL BODY VAMOS A CREAR UN FORM, QUE VA A SER SOLO UN IMPUT QUE CUANDO APRETEMOS ENTER VAMOS A 
+         LLAMAR A ONSUBMIT Y A LLAMAR A ESTA FUNCION QUE VAMOS A CREAR EN NUESTRO JS --> 
+        <input type="text" name="pokemon" autocomplete="off">
+    </form>
+    <!--TERCERO, DENTRO DEL FORM TENEMOS NUESTRO IMPUT TEXT Y LE PONEMOS N NAME PARA DESPUES BUSCAR EL VALOR QUE TENGA Y LE PONEMOS
+     AUTOCOMPLETE OFF PARA QUE NO SE MUESTRE EL HISTORIAL DE BUSQUEDAS -->
+
+    <div data-poke-card class="poke-card">
+        <!--DENTRO DEL DIV POKE-CARD VAMOS A PONER EL CONTENIDO DE LA CARD, ESTO ES LA POKEDEX Y PUSIMOS DATA POKE CARD. 
+        VAMOS A USAR ESTOS ATRIBUTOS DATA PARA SELECCIONAR LOS ELEMENTOS Y BUSCARLOS DE NUESTRO JS, PARA PODER UTILIZARLOS 
+        DENTRO DEL JS. LUEGO ESTE DATA ESTARÁ EN CADA UNO DE LOS ELEMENTOS -->
+        <div data-poke-name>Pokedex</div>
+        <div data-poke-img-container class="img-container">
+            <img data-poke-img class="poke-img" src="./poke-shadow.png" alt="sombra pokemon"/>
+            <!--voy por el video pokemon min4.21 -->
+        </div>
+        <div data-poke-id></div>
+        <div data-poke-types class="poke-types"></div>
+        <div data-poke-stats class="poke-stats"></div>
+    </div>
+</body>
+</html>
